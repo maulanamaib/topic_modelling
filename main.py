@@ -66,3 +66,4 @@ for i in range (1,(lda.components_.shape[1]+1)):
   label.append(masukan)
 VT_tabel = pd.DataFrame(lda.components_,columns=label)
 VT_tabel.rename(index={0:"Topik 1",1:"Topik 2",2:"Topik 3"}).transpose()
+VT_tabel
