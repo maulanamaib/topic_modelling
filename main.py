@@ -15,8 +15,22 @@ from sklearn.decomposition import LatentDirichletAllocation
 data = pd.read_csv("https://raw.githubusercontent.com/maulanamaib/topic_modelling/master/datavcm.csv")
 del(data['Unnamed: 0'])
 data '''
+
+code2 ='''
+lda = LatentDirichletAllocation(n_components=3, doc_topic_prior=0.2, topic_word_prior=0.1,random_state=42,max_iter=1)
+lda_top=lda.fit_transform(data)
+print(lda_top.shape)
+print(lda_top)
+'''
 st.code(code1, language='python')
 
 data = pd.read_csv("https://raw.githubusercontent.com/maulanamaib/topic_modelling/master/datavcm.csv")
 del(data['Unnamed: 0'])
 data
+
+st.code(code2, language='python')
+
+lda = LatentDirichletAllocation(n_components=3, doc_topic_prior=0.2, topic_word_prior=0.1,random_state=42,max_iter=1)
+lda_top=lda.fit_transform(data)
+print(lda_top.shape)
+print(lda_top)
