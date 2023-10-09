@@ -50,15 +50,15 @@ st.code(code2, language='python')
 
 lda = LatentDirichletAllocation(n_components=3, doc_topic_prior=0.2, topic_word_prior=0.1,random_state=42,max_iter=1)
 lda_top=lda.fit_transform(data)
-print(lda_top.shape)
-print(lda_top)
+lda_top.shape
+lda_top
 
 st.code(code3, language='python')
 U = pd.DataFrame(lda_top, columns=['Topik 1','Topik 2','Topik 3'])
 U
 st.code(code4, language='python')
-print(lda.components_)
-print(lda.components_.shape)
+lda.components_
+lda.components_.shape
 st.code(code5, language='python')
 label=[]
 for i in range (1,(lda.components_.shape[1]+1)):
