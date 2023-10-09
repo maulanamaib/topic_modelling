@@ -3,7 +3,7 @@ import dataset
 import time
 import webbrowser
 from pathlib import Path
-import pandas as pd
+# import pandas as pd
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import metrics
