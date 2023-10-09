@@ -1,5 +1,6 @@
-st.code(import pandas as pd
+code1= '''import pandas as pd
 from sklearn.decomposition import LatentDirichletAllocation
 data = pd.read_csv("https://raw.githubusercontent.com/maulanamaib/topic_modelling/master/datavcm.csv")
 del(data['Unnamed: 0'])
-data, language='python')
+data'''
+st.code(code1, language='python')
